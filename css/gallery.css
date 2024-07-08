@@ -1,0 +1,128 @@
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fcfcff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Header styles */
+h1 {
+  background: linear-gradient(135deg, #57d4e7, #ffc3a0);
+  color: #c32fc1;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+/* Gallery container */
+#gallery {
+  margin: 2em auto;
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+}
+
+/* Figure styles for featured image */
+figure {
+  margin: 0 auto;
+  padding: 1em;
+  background: #d0cbcb;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Featured image */
+#featured {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 10px solid #ffafbd;
+  transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+#featured:hover {
+  transform: scale(1.05);
+}
+
+/* Caption below featured image */
+figcaption {
+  margin-top: 1em;
+  font-size: 1.4em;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Thumbnail list */
+#thumbnails {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+/* Individual thumbnail item */
+#thumbnails li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Thumbnail image styles */
+#thumbnails img {
+  width: 240px;
+  height: 160px;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#thumbnails img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Active thumbnail image */
+#thumbnails img.active {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation arrows */
+.fas {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5em;
+  color: #220bd6;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.fas:hover {
+  color: #ffc3a0;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Left arrow */
+#prev {
+  left: 10px;
+}
+
+/* Right arrow */
+#next {
+  right: 10px;
+}

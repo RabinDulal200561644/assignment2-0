@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Inline styles for demonstration purposes */
+        #gallery {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #gallery figure {
+            position: relative;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        #gallery figure img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 5px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        #gallery figure figcaption {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        #thumbnails {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #thumbnails li {
+            margin: 0 5px;
+        }
+        #thumbnails img {
+            display: block;
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        #thumbnails img.active {
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <section id="gallery">
+        <figure>
+            <i class="fas fa-arrow-left" id="prev"></i>
+            <img id="featured" src="images/flowers-pink-large.jpg" alt="Featured Image" width="1200" height="800">
+            <i class="fas fa-arrow-right" id="next"></i>
+            <figcaption id="caption">Pink Flowers</figcaption>
+        </figure>
+        <ul id="thumbnails"></ul>
+    </section>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
